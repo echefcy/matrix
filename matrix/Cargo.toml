@@ -10,7 +10,7 @@ name = "matrix"
 path = "src/lib.rs"
 
 [[bin]]
-name = "main"
-path = "src/bin/main.rs"
+name = "driver"
+path = "src/bin/driver.rs"
 
 [dependencies]

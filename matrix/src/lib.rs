@@ -6,3 +6,17 @@ mod tests {
         assert_eq!(result, 4);
     }
 }
+
+
+mod matrix{
+    use std::ops::Mul;
+    use std::ops::Add;
+    struct Matrix<T>{
+        rsize: usize,
+        csize: usize,
+        data: Vec<T>
+    }
+    impl<T> Matrix<T>{
+        
+    }
+}
