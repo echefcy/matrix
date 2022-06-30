@@ -40,3 +40,4 @@ public:
 	void resize(size_t);
 };
 
+#include "dev_array.tpp"

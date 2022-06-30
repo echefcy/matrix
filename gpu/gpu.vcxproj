@@ -81,7 +81,7 @@
     <CudaCompile Include="kernel.cu" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dev_array.cpp" />
+    <ClCompile Include="dev_array.tpp" />
     <ClCompile Include="ops.cpp" />
   </ItemGroup>
   <ItemGroup>

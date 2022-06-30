@@ -1,4 +1,3 @@
-#include "dev_array.h"
 #include <cuda_runtime.h>
 #include <stdexcept>
 
@@ -77,9 +76,9 @@ private:
 	}
 
 	void free() {
-		auto result = cudaFree(Start);
-		if (result != cudaSuccess) {
-			throw std::runtime_error("dev_array: failed to free device memory");
+		if (Start != 0) {
+			cudaFree(Start);
+			Start = Size = 0;
 		}
 	}
 
