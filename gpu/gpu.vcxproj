@@ -81,11 +81,11 @@
     <CudaCompile Include="kernel.cu" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cuda_array.cpp" />
+    <ClCompile Include="dev_array.cpp" />
     <ClCompile Include="ops.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cuda_array.h" />
+    <ClInclude Include="dev_array.h" />
     <ClInclude Include="kernel.h" />
     <ClInclude Include="ops.h" />
   </ItemGroup>
