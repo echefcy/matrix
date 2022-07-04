@@ -8,3 +8,12 @@ mod tests {
 }
 
 pub mod matrix;
+
+#[cxx::bridge]
+mod ffi{
+    unsafe extern "C++"{
+        include!("matrix/gpu/ops.h");
+        
+        fn sum(&CxxVector<float>, &CxxVector<float>) -> CxxVector<float>;
+    }
+}

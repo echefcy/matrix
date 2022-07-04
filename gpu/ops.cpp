@@ -18,12 +18,12 @@ std::vector<float> sum(const std::vector<float>& v1, const std::vector<float>& v
 	return h_result;
 }
 
-int main() {
-	std::vector<float> a = { 1,2,3,4,5 };
-	std::vector<float> b = { 1,2,3,4,5 };
-	auto s = sum(a, b);
-	for (auto elem : s) {
-		std::cout << elem << std::endl;
-	}
-	std::cin;
-}
+//int main() {
+//	std::vector<float> a = { 1,2,3,4,5 };
+//	std::vector<float> b = { 1,2,3,4,5 };
+//	auto s = sum(a, b);
+//	for (auto elem : s) {
+//		std::cout << elem << std::endl;
+//	}
+//	std::cin;
+//}

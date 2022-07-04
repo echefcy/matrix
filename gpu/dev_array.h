@@ -18,6 +18,11 @@ public:
 		copy_from(host_src, size);
 	}
 
+	dev_array(const dev_array& src) : Size(src.Size) {
+		allocate(Size);
+		cudaMemcpy(Size, src.Start, Size, cudaMemcpyDeviceToDevice);
+	}
+
 	~dev_array() {
 		free();
 	}
@@ -87,6 +92,7 @@ private:
 		auto result = cudaMalloc((void**)&Start, byte_size);
 		if (result != cudaSuccess) {
 			Start = nullptr;
+			Size = 0;
 			throw std::runtime_error("dev_array: failed to allocate device memory");
 		}
 	}
@@ -94,7 +100,7 @@ private:
 	void free() {
 		if (Start != 0) {
 			cudaFree(Start);
-			Start = 0;
+			Start = nullptr;
 			Size = 0;
 		}
 	}
